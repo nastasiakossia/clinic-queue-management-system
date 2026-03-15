@@ -22,8 +22,8 @@ The design ensures that insertions, deletions, and queries remain efficient even
 
 ### Doctor management
 Add or remove doctors from the system.
-doctorEnter(id)
-doctorLeave(id)
+- `doctorEnter(id)`
+- `doctorLeave(id)`
 
 A doctor can leave the system only when their queue is empty.
 
@@ -32,10 +32,10 @@ A doctor can leave the system only when their queue is empty.
 ### Patient management
 Patients can join queues, leave early, or be served in FIFO order.
 
-patientEnter(doctorId, patientId)
-patientEnter(patientId)
-patientLeaveEarly(patientId)
-nextPatientLeave(doctorId)
+- `patientEnter(doctorId, patientId)`
+- `patientEnter(patientId)`
+- `patientLeaveEarly(patientId)`
+- `nextPatientLeave(doctorId)`
 
 Patients may either choose a specific doctor or be automatically assigned to the **least busy doctor**.
 
@@ -44,9 +44,9 @@ Patients may either choose a specific doctor or be automatically assigned to the
 ### Queries
 The system supports efficient queries about doctor queues and patient assignments.
 
-numPatients(doctorId)
-nextPatient(doctorId)
-waitingForDoctor(patientId)
+- `numPatients(doctorId)`
+- `nextPatient(doctorId)`
+- `waitingForDoctor(patientId)`
 
 These queries allow the system to determine the next patient, the number of waiting patients, and which doctor a patient is assigned to.
 
@@ -55,10 +55,10 @@ These queries allow the system to determine the next patient, the number of wait
 ### Workload analytics
 The system also provides analytical queries over doctor workloads.
 
-numDoctorsWithLoadInRange(low, high)
-averageLoadWithinRange(low, high)
-getLeastBusyDoctor()
-getTopKBusyDoctors(k)
+- `numDoctorsWithLoadInRange(low, high)`
+- `averageLoadWithinRange(low, high)`
+- `getLeastBusyDoctor()`
+- `getTopKBusyDoctors(k)`
 
 
 These operations allow the system to:

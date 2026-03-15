@@ -140,7 +140,6 @@ Top-k busiest doctors | O(k + log n) |
 ---
 
 # Project Structure
-
 ClinicQueueSystem
 │
 ├── ClinicManager.java

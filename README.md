@@ -140,6 +140,7 @@ Top-k busiest doctors | O(k + log n) |
 ---
 
 # Project Structure
+```
 ClinicQueueSystem
 │
 ├── ClinicManager.java
@@ -151,7 +152,7 @@ ClinicQueueSystem
 ├── QNode.java
 ├── HasKey.java
 └── Main.java
-
+```
 
 `Main.java` contains a test runner that validates the system functionality.
 
